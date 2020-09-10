@@ -61,7 +61,7 @@ justify-content: space-between;
 font-weight: bold;
 margin: .5em 0;}
 
-.totalFollowers span{
+span{
 color: hsl(228, 34%, 66%);}
 
 
@@ -124,15 +124,21 @@ justify-content: space-between;}
 
 .socialMediaBoxItem{
 text-align: center;
-width: 21em; height: 14em;
-margin: .5em 0;
-padding: 2em;
-border-radius: 5px;
-border-top: 5px solid;
-background: hsl(228, 28%, 20%);}
+height: 14em;
+border-top: 5px solid;}
 
-.socialMediaBoxItem:hover{
-    background:hsl(228, 30%, 25%)
+.socialMediaBoxOverviewItem{
+height: 10em;}
+
+.teste{
+width: 21em;
+padding: 2em;
+margin: .5em 0;
+border-radius: 5px;
+background: hsl(228, 28%, 20%);} 
+
+.teste:hover{
+background:hsl(228, 30%, 25%)
 }
 
 .socialMediaBoxItem:nth-child(-n+2){
@@ -182,17 +188,17 @@ margin-right: 5px;
 
 
 h3{
-font-size: 3rem;
-}
+font-size: 3rem;}
+
+.socialMediaBoxOverviewItem h3{
+font-size: 2rem;}
 
 p{
-color: hsl(228, 34%, 66%);
-}
+color: hsl(228, 34%, 66%);}
 
 h3 + p{
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
+text-transform: uppercase;
+letter-spacing: 4px;}
 
 
 @media (max-width: 376px){
