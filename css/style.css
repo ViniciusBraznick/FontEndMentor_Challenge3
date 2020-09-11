@@ -1,52 +1,28 @@
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
-/* ### Primary
-- Lime Green: hsl(163, 72%, 41%)
-- Bright Red: hsl(356, 69%, 56%)
-
-- Facebook: hsl(208, 92%, 53%)
-- Twitter: hsl(203, 89%, 53%)
-- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
-- YouTube: hsl(348, 97%, 39%)
-
-#### Dark Theme
-- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
-
-#### Light Theme
-- Toggle: hsl(230, 22%, 74%)
-
-#### Dark Theme
-- Very Dark Blue (BG): hsl(230, 17%, 14%)
-- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
-- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
-- Desaturated Blue (Text): hsl(228, 34%, 66%)
-- White (Text): hsl(0, 0%, 100%)
-
-#### Light Theme
-- White (BG): hsl(0, 0%, 100%)
-- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
-- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
-- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
-- Very Dark Blue (Text): hsl(230, 17%, 14%) */
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;}
 
+:root{
+--color-bg-body: hsl(230, 17%, 14%);
+--color-letters: hsl(0, 0%, 100%);
+--color-square-bg: hsl(232, 19%, 15%);
+--color-standardBox: hsl(228, 28%, 20%);
+--color-hover: hsl(228, 30%, 25%);}
+
 body{
 font-family: 'Inter', sans-serif;
 font-size: 14px;
-background: hsl(230, 17%, 14%);
-color: white;}
+cursor: default;
+background: var(--color-bg-body);
+color: var(--color-letters);}
 
-/* Quadro do background */
 .squareBackground{
 position: absolute;
 z-index: -1;
 top: 0;
-background: hsl(232, 19%, 15%);
+background: var(--color-square-bg);
 width: 100%; height: 30vh;}
-
 
 .mainBox{
 margin: 2em auto;
@@ -65,8 +41,7 @@ span{
 font-weight: bold;
 color: hsl(228, 34%, 66%);}
 
-
-/* Botão toggle */
+/* button toggle */
 .toggle{
 display: flex;
 align-items: center;
@@ -116,7 +91,6 @@ border-radius: 34px;}
 .slider.round:before {
 border-radius: 50%;}
 
-
 /* Section */
 .socialMediaBox{
 display: flex;
@@ -138,26 +112,22 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-height: 3.5em;
-}
+height: 3.5em;}
 
 .standardBox{
 width: 21em;
 margin: .5em 0;
 border-radius: 5px;
-background: hsl(228, 28%, 20%);} 
+background: var(--color-standardBox)} 
 
 .standardBox:hover{
-background:hsl(228, 30%, 25%)
-}
+background:var(--color-hover)}
 
 .socialMediaBoxItem:nth-child(-n+2){
-border-color:hsl(208, 92%, 53%);
-}
+border-color:hsl(208, 92%, 53%);}
 
 .socialMediaBoxItem:last-child{
-border-color: hsl(348, 97%, 39%);
-}
+border-color: hsl(348, 97%, 39%);}
 
 .socialMediaBoxItem:nth-child(3){
 position: relative;
@@ -173,8 +143,7 @@ width: 100%;
 height: 4px;
 border-top-left-radius: 5px;
 border-top-right-radius: 5px;
-background-image: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
-}
+background-image: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));}
 
 .iconSocialMediaBoxItem{
 display: flex;
@@ -183,38 +152,31 @@ align-items: center;
 margin-bottom: 1em;}
 
 .iconSocialMediaBoxItem img{
-margin-right: 5px;
-}
+margin-right: 5px;}
 
 .socialMediaBoxItem span{
 margin: 1em 0;
-color: hsl(163, 72%, 41%);
-}
+color: hsl(163, 72%, 41%);}
 
 .socialMediaBoxItem .red{
-    color: hsl(356, 69%, 56%)
-}
+color: hsl(356, 69%, 56%)}
 
 .socialMediaBoxOverviewItem .red span{
-    color: hsl(356, 69%, 56%)
-}
+color: hsl(356, 69%, 56%)}
 
 .iconMediaBoxOverviewItem{
-    display: flex;
-    align-items: center;
-}
+display: flex;
+align-items: center;}
 
 .iconMediaBoxOverviewItem img{
-    margin-right: 5px;
-}
+margin-right: 5px;}
 
-
+/* text */
 h3{
 font-size: 3rem;}
 
 h2{
-    margin: 1em 0;
-}
+margin: 1em 0;}
 
 .socialMediaBoxOverviewItem h3{
 font-size: 2rem;}
@@ -234,13 +196,12 @@ flex-direction: column;}
 .totalFollowers span:first-child{
 border-bottom: 1px solid hsl(228, 28%, 20%);
 padding-bottom: 1em;
-margin-bottom: 1em;}
-}
+margin-bottom: 1em;}}
 
 @media(max-width: 735px){
 .socialMediaBox{
 justify-content: center;}
 
 h2{
-text-align: center;}
-}
+text-align: center;}}
+
