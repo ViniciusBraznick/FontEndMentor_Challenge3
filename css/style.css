@@ -3,12 +3,21 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;}
 
-:root{
+html{
 --color-bg-body: hsl(230, 17%, 14%);
 --color-letters: hsl(0, 0%, 100%);
 --color-square-bg: hsl(232, 19%, 15%);
 --color-standardBox: hsl(228, 28%, 20%);
---color-hover: hsl(228, 30%, 25%);}
+--color-hover: hsl(228, 30%, 25%);
+}
+
+html[theme='light'] {
+--color-bg-body: hsl(0, 0%, 100%);
+--color-letters: hsl(230, 17%, 14%);
+--color-square-bg: hsl(225, 100%, 98%);
+--color-standardBox: hsl(227, 47%, 96%);
+--color-hover: hsl(217, 10%, 84%);
+}
 
 body{
 font-family: 'Inter', sans-serif;
@@ -188,6 +197,19 @@ h3 + p{
 text-transform: uppercase;
 letter-spacing: 4px;}
 
+.attribution{
+    display: flex;
+    justify-content: center;  
+}
+
+.attribution a{
+text-decoration: none;
+color: var(--color-letters);
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+}
 
 @media (max-width: 376px){
 .totalFollowers{
