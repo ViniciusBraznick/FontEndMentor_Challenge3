@@ -10,14 +10,11 @@ counters.forEach(item => {
 
         if ( counter < limit ) {
             item.innerText = parseInt(counter + inc)
-            console.log(counter + inc);
             setTimeout( updateCounter , 1);
         } else{
             item.innerText = limit
 
-            if (parseInt(limit) == 5200 || parseInt(limit) == 11000) {
-                limit == 5200 ? item.innerText = '52K' : item.innerText = '11K' 
-            }
+            if (limit > 10000) item.innerText = limit.toString().slice(0, 2) + "K";
         }
     }
 
